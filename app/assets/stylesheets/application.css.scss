@@ -42,6 +42,7 @@ textarea {
 }
 .jumbotron {
   background-image: asset-url('background.jpg');
+  background-attachment: fixed;
   height: 550px;
 } 
 
