@@ -2,3 +2,26 @@ harry:
   name: Harry Potter
   email: example@railstutorial.org
   password_digest: <%= User.digest('password') %>
+  admin: true
+
+voldemort:
+  name: Lord Voldemort
+  email: example-1@railstutorial.org
+  password_digest: <%= User.digest('password') %>
+
+ron:
+  name: Ron Weasley
+  email: example-2@railstutorial.org
+  password_digest: <%= User.digest('password') %>
+
+hermoine:
+  name: Hermoine Granger
+  email: example-3@railstutorial.org
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
